@@ -1,0 +1,168 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    padding:7px 200px;
+    font-size: 16px;
+    font-family: Gilroy-Medium;
+    background-color: rgb(63, 63, 63);
+}
+.head{
+    color: white;
+}
+.head__mainInfo{
+    background-color: #d9cabb;
+    padding: 13px 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-family: Gilroy-Medium;
+    color:rgb(63, 63, 63);
+}
+.head__logo{
+    font-size: 30px;
+    font-family: Gilroy-Bold;
+    color: rgb(106, 79, 57);
+    align-items: center;
+}
+.head__text{
+    color:rgb(63, 63, 63);
+}
+.head__contacts{
+    font-family: Gilroy-Bold;
+}
+
+.banner__img{
+    width: 100%;
+    height: auto;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    padding: 0 100px;
+}
+.content__title{
+    font-size: 45px;
+    font-family: Gilroy-Bold;
+    color: rgb(106, 79, 57);
+    align-items: center;
+}
+
+
+
+.command__employee{
+    background-size: cover;
+    height: 400px;
+    width: 300px;
+    border: 1px solid black;
+    margin-right: 70px;
+    margin-bottom: 50px;
+}
+#admin{
+    background-image: url("./img/admin.png");
+}
+#admin1{
+    background-image: url("./img/1.png");
+}
+#admin2{
+    background-image: url("./img/2.png");
+}
+#admin3{
+    background-image: url("./img/3.png");
+}
+#admin4{
+    background-image: url("./img/4.png");
+}
+#admin5{
+    background-image: url("./img/5.png");
+}
+#admin6{
+    background-image: url("./img/6.png");
+}
+.employee__about{
+    display: flex;
+    flex-direction: column;
+    margin: 320px 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.678);
+
+}
+.employee__text{
+    color: white;
+    margin: 0 0 10px 0;
+}
+.employee__post{
+    font-size: 14px;
+    font-family: Gilroy-Medium;
+}
+.employee__name{
+    font-size: 20px;
+    font-family: Gilroy-Bold;
+}
+
+.command__description{
+    font-family: Gilroy-Medium;
+    color:rgba(52, 46, 38, 0.879);
+    font-size: 18px;
+}
+.command__container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+footer{
+    margin-top: auto;
+    height: 80px;
+    width: 100%;
+    background: black;
+    color: white;
+    font-family: Gilroy-Medium;
+    align-items: center;
+}
+.footer__contact{
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    margin: 0 auto;
+    align-items: center;
+}
+.footer__phone{
+    font-family: Gilroy-Bold;
+    font-size: 18px;
+}
+
+
+
+@font-face {
+    font-family: "Gilroy-Bold";
+    src: url("../fonts/gilroy-bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Gilroy-Light";
+    src: url("../fonts/Gilroy-Light.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Gilroy-Medium";
+    src: url("../fonts/gilroy-medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
