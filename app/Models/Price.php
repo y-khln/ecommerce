@@ -9,4 +9,9 @@ class Price extends Model
 {
 //    use HasFactory;
     protected $primaryKey = 'id_service';
+
+    public function serviceGroup()
+    {
+            return $this->hasOne(ServiceGroup::class, 'id_group', 'id_group');
+    }
 }

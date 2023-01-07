@@ -49,10 +49,63 @@ a{
 }
 
 
-
-
-
-
+.admin{
+    padding: 20px;
+    font-family: Gilroy-Medium;
+}
+.admin__function{
+    padding-bottom: 10px;
+    font-family: Gilroy-Bold;
+    font-size: 18px;
+}
+th,td{
+    padding: 0 10px;
+}
+th{
+    padding-bottom: 5px;
+}
+td{
+    text-align: center;
+}
+.admin__back{
+    margin: 30px 0 0 20px;
+    height: 55px;
+    width: 200px;
+    font-size: 18px;
+    font-family: Gilroy-Bold;
+    background: #d9cabb;
+    color: #6a4f39;
+    border: none;
+    border-radius: 5px;
+}
+.admin__back:hover{
+    background: #ab9585;
+    color: #5b4231;
+    transition: 0.5s;
+}
+input{
+    margin-left: 10px;
+    height: 24px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.add-master__button{
+    width: 150px;
+    height: 30px;
+    margin: 10px auto 10px auto;
+    border: none;
+    border-radius: 7px;
+    background: #d9cabb;
+    color: #6a4f39;
+    font-family: Gilroy-Bold;
+    font-size: 16px;
+}
+.add-master__button:hover{
+    background: #c9b09d;
+    color: #543c2d;
+    transition: 0.5s;
+}
 
 footer{
     margin-top: auto;

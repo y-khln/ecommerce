@@ -9,4 +9,10 @@ class Employee extends Model
 {
 //    use HasFactory;
     protected $primaryKey = 'id_employee';
+    protected $guarded = [];
+
+    public function shedules()
+    {
+        return $this->hasMany(Schedule::class, 'id_employee', 'id_employee');
+    }
 }

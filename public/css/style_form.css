@@ -1,0 +1,256 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Gilroy-Medium;
+}
+a{
+    text-decoration: none;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    padding:7px 200px;
+    font-size: 16px;
+    font-family: Gilroy-Medium;
+    background-color: rgb(63, 63, 63);
+}
+.head{
+    color: white;
+}
+.head__mainInfo{
+    background-color: #d9cabb;
+    padding: 13px 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-family: Gilroy-Medium;
+    color:rgb(63, 63, 63);
+}
+.head__logo{
+    font-size: 30px;
+    font-family: Gilroy-Bold;
+    color: rgb(106, 79, 57);
+    align-items: center;
+    outline: none;
+    text-decoration: none;
+}
+
+.head__text{
+    color:rgb(63, 63, 63);
+}
+.head__contacts{
+    font-family: Gilroy-Bold;
+}
+
+.service__mini{
+    display:flex;
+    border: 1px solid rgb(106, 79, 57);
+}
+
+.main__select{
+    margin-top: 7px;
+}
+
+
+
+.finish, .schedule, .main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*height: 50vh;*/
+    flex-direction: column;
+}
+.main{
+    max-height: 300px;
+}
+.schedule{
+    max-height: 200px;
+}
+#span_service{
+    margin-top: -50px;
+    margin-bottom: -20px;
+}
+.main__title{
+    font-family: Gilroy-Bold;
+    font-size: 20px;
+}
+a{
+    color: #6a4f39;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 300px;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    /*box-shadow: 0 4px 16px #ccc;*/
+    padding-top: 25px;
+    margin-bottom: 25px;
+}
+
+
+.form__input{
+    width: 400px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(106, 79, 57);
+    background-color: transparent;
+    transition: 0.3s;
+    margin: 0 0 20px 0;
+    padding: 0 0 10px 0;
+    font-family: Gilroy-Light;
+    font-size: 18px;
+}
+
+.form__input:focus{
+    border-bottom: 1px solid rgb(183, 128, 86);
+}
+
+.form__btn{
+    width: 400px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: rgb(106, 79, 57);
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: Gilroy-Light;
+    font-size: 20px;
+    height: 55px;
+}
+
+.form__btn, .param, .param1:focus,
+.form__btn, .param, .param1:hover{
+    background-color: rgb(183, 128, 86);
+}
+
+
+
+
+
+.param, .param1{
+    width: 150px;
+    height: 30px;
+    margin: 10px auto 10px auto;
+    border: none;
+    border-radius: 7px;
+    background: #d9cabb;
+    color: #6a4f39;
+    font-family: Gilroy-Bold;
+    font-size: 16px;
+}
+.param:hover{
+    background: #c9b09d;
+    color: #543c2d;
+    transition: 0.5s;
+}
+.param1:hover{
+    background: #c9b09d;
+    color: #543c2d;
+    transition: 0.5s;
+}
+
+.form__after{
+    font-size: 20px;
+    font-family: Gilroy-Medium;
+}
+
+.schedule{
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto 100px auto;
+    padding: 10px;
+}
+.times{
+    display: flex;
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: -5px;
+}
+.time{
+    width: 50px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: rgb(106, 79, 57);
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: Gilroy-Light;
+    font-size: 16px;
+    height: 20px;
+    margin: 0 10px;
+}
+.time__selected{
+    display: flex;
+    height: 30px;
+    margin-top: -10px;
+}
+.time:focus,
+.time:hover {
+    background-color: rgb(183, 128, 86);
+}
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    margin-top: auto;
+    height: 80px;
+    width: 100%;
+    background: black;
+    color: white;
+    font-family: Gilroy-Medium;
+    align-items: center;
+}
+.footer__contact{
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    margin: 0 auto;
+    align-items: center;
+}
+.footer__phone{
+    font-family: Gilroy-Bold;
+    font-size: 18px;
+}
+
+
+
+
+@font-face {
+    font-family: "Gilroy-Bold";
+    src: url("../fonts/gilroy-bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Gilroy-Light";
+    src: url("../fonts/Gilroy-Light.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Gilroy-Medium";
+    src: url("../fonts/gilroy-medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}

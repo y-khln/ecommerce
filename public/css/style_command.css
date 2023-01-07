@@ -7,6 +7,7 @@ body{
 }
 a{
     text-decoration: none;
+    color: #6a4f39;
 }
 .menu{
     display: flex;
@@ -64,31 +65,59 @@ a{
     background-size: cover;
     height: 400px;
     width: 300px;
-    border: 1px solid black;
+    border: 1px solid lightgrey;
     margin-right: 70px;
     margin-bottom: 50px;
 }
 #admin{
-    background-image: url("./img/admin.png");
+    background-image: url("../img/admin.png");
 }
 #admin1{
-    background-image: url("./img/1.png");
+    background-image: url("../img/1.jpg");
 }
 #admin2{
-    background-image: url("./img/2.png");
+    background-image: url("../img/2.jpg");
 }
 #admin3{
-    background-image: url("./img/3.png");
+    background-image: url("../img/3.jpg");
 }
 #admin4{
-    background-image: url("./img/4.png");
+    background-image: url("../img/4.jpg");
 }
 #admin5{
-    background-image: url("./img/5.png");
+    background-image: url("../img/5.jpg");
 }
 #admin6{
-    background-image: url("./img/6.png");
+    background-image: url("../img/6.jpg");
 }
+#admin7{
+    background-image: url("../img/7.jpg");
+}
+#admin8{
+    background-image: url("../img/8.jpg");
+}
+#admin9{
+    background-image: url("../img/9.jpg");
+}
+#admin10{
+    background-image: url("../img/10.jpg");
+}
+#admin11{
+    background-image: url("../img/11.jpg");
+}
+#admin12{
+    background-image: url("../img/12.jpg");
+}
+#admin13{
+    background-image: url("../img/13.jpg");
+}
+#admin14{
+    background-image: url("../img/14.jpg");
+}
+#admin15{
+    background-image: url("../img/15.jpg");
+}
+
 .employee__about{
     display: flex;
     flex-direction: column;

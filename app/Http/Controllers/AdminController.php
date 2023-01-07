@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Appointment;
+use App\Models\Employee;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class adminController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +16,8 @@ class adminController extends Controller
      */
     public function index()
     {
-        return view('admin');
+        $employees = Employee::all();
+        return view('admin',compact('employees'));
     }
 
     /**
@@ -77,8 +81,5 @@ class adminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
-    }
+
 }

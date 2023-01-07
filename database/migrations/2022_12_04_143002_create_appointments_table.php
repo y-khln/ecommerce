@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('appointments', function (Blueprint $table) {
             $table->bigIncrements('id_appointment');
-            $table->bigIncrements('id_master')->unsigned();
-            $table->bigIncrements('id_service')->unsigned();
+            $table->biginteger('id_master')->unsigned();
+            $table->biginteger('id_service')->unsigned();
             $table->string('client_name');
             $table->string('client_phone');
             $table->integer('time');
