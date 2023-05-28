@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/style_admin.css">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+{{--    <meta name="csrf-token" content="{{ csrf_token() }}">--}}
 </head>
 <body>
 <div class="head">
@@ -29,7 +29,7 @@
 
 <div>
     <button class="admin__back"><a href="/logout">Выйти из учетной записи</a></button>
-    <form class="admin admin__add-master" method="POST" action="{{ route('employee.save') }}">
+{{--    <form class="admin admin__add-master" method="POST" action="{{ route('employee.save') }}">--}}
         @csrf
         <p class="admin__function">Добавление нового сотрудника</p>
         <span>Имя сотрудника</span>
@@ -136,6 +136,108 @@
         <p></p>
         <button class="add-master__button" type="submit" value="1" name="sendService">Подтвердить</button>
     </form>
+
+    <div class="admin admin__delete-service">
+        <p class="admin__function">Удаление услуги</p>
+        <table class="admin__delete-service">
+            <tr>
+                <th>id услуги</th>
+                <th>id категории</th>
+                <th>название</th>
+                <th>длительность</th>
+                <th>стоимость</th>
+            @foreach($services as $s)
+                <tr>
+                    <td>
+                        {{$s->id_service}}
+                    </td>
+                    <td>
+                        {{$s->id_group}}
+                    </td>
+                    <td>
+                        {{$s->title}}
+                    </td>
+                    <td>
+                        {{$s->duration}}
+                    </td>
+                    <td>
+                        {{$s->price}}
+                    </td>
+                    <td>
+                        @csrf
+                        <a href="{{route('price.delete',$s->id_service)}}">
+                            <button>Удалить</button>
+                        </a>
+                    </td>
+                </tr>
+            @endforeach
+        </table>
+    </div>
+
+
+    <form class="admin admin__add-schedule" method="POST" action="{{route('schedule.save')}}">
+        @csrf
+        <p class="admin__function">Добавление расписания для мастера</p>
+        <span>ID мастера</span>
+        <input type="text" value="" id="id_employee_sch" name="id_employee_sch" placeholder="Введите id мастера" required>
+        <p></p>
+        <span>Расписание мастера</span>
+        <input type="text" value="" id="time_sch" name="time_sch" placeholder="Введите расписание в формате JSON" required>
+        <p></p>
+        <span>Выберите дату для указанного расписания</span>
+        <select name="date_sch" class="main__select">
+            <option value="2023-01-10">10.01</option>
+            <option value="2023-01-11">11.01</option>
+            <option value="2023-01-12">12.01</option>
+            <option value="2023-01-13">13.01</option>
+            <option value="2023-01-14">14.01</option>
+            <option value="2023-01-15">15.01</option>
+            <option value="2023-01-16">16.01</option>
+        </select>
+        <p></p>
+        <button class="add-master__button" type="submit" value="1" name="sendService">Подтвердить</button>
+    </form>
+
+    <div class="admin admin__delete-schedule">
+        <p class="admin__function">Удаление расписания</p>
+        <table class="admin__delete-schedule">
+            <tr>
+                <th>id расписания</th>
+                <th>id мастера</th>
+                <th>расписание</th>
+                <th>дата</th>
+            @foreach($schedules as $sch)
+                <tr>
+                    <td>
+                        {{$sch->id_schedule}}
+                    </td>
+                    <td>
+                        {{$sch->id_employee}}
+                    </td>
+                    <td>
+                        @foreach(json_decode($sch->time,true) as $element)
+                            @if($element["free"]===true)
+                                {{$element["time"]}}
+                            @endif
+                        @endforeach
+
+                    </td>
+                    <td>
+                        {{$sch->date}}
+                    </td>
+                    <td>
+                        @csrf
+                        <a href="{{route('schedule.delete',$sch->id_schedule)}}">
+                            <button>Удалить</button>
+                        </a>
+                    </td>
+                </tr>
+            @endforeach
+        </table>
+    </div>
+
+
+
 </div>
 
 </body>

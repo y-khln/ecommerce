@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Schedule extends Model
 {
     use HasFactory;
+    protected $fillable = ['time'];
+    public $incrementing = true;
 
     public function employee()
     {

@@ -202,8 +202,24 @@ form{
     background-color: rgb(183, 128, 86);
 }
 
-
-
+.record{
+    display: flex;
+    margin: 50px auto;
+    flex-direction: column;
+}
+#record__p{
+    margin: 0 auto;
+}
+#record__btn{
+    margin: 10px auto;
+    font-size: 18px;
+    width: 200px;
+    height: 50px;
+    color: white;
+}
+.record__href{
+    color: white;
+}
 
 
 

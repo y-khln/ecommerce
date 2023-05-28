@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Appointment;
 use App\Models\Employee;
+use App\Models\Price;
+use App\Models\Schedule;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -17,7 +19,10 @@ class AdminController extends Controller
     public function index()
     {
         $employees = Employee::all();
-        return view('admin',compact('employees'));
+        $services = Price::all();
+        $schedules = Schedule::all();
+        $time = Schedule::pluck('time');
+        return view('admin',['employees'=>$employees, 'services'=>$services, 'schedules'=>$schedules, 'time'=>$time]);
     }
 
     /**

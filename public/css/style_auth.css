@@ -92,7 +92,11 @@ input{
     color: #543c2d;
     transition: 0.5s;
 }
-
+.message{
+    font-family: Gilroy-Medium;
+    font-size: 14px;
+    color: #de1414;
+}
 
 .new{
     margin: 100px auto;

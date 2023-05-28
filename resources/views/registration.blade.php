@@ -46,5 +46,4 @@
     <div class="form_group">
         <button class="form__button" type="submit" value="1" name="sendAuth">Регистрация</button>
     </div>
-
 </form>

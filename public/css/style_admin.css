@@ -106,6 +106,11 @@ input{
     color: #543c2d;
     transition: 0.5s;
 }
+#time_sch{
+    width: 300px;
+    height: 25px;
+}
+
 
 footer{
     margin-top: auto;

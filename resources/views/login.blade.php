@@ -49,9 +49,5 @@
 
 </form>
 
-<div class="new">
-    <p class="new__title">Вы наш новый сотрудник?</p>
-    <button class="new__registrate"><a href="/registration">Зарегистрироваться</a></button>
-</div>
 
 

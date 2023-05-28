@@ -26,29 +26,11 @@
     </div>
 </div>
 
-<div class="schedule">
-    <form class="service__mini" action="{{route('finish')}}" method="post">
-        @csrf
-    @foreach($schedules as $res)
-        @if($res->time!=null)
-            <p class="schedule__master">Мастер: {{$res->employee->name}} {{$res->employee->surname}}</p>
-            <div class="times">
-                @foreach($res->time as $time)
-                    <button onclick="
-                        document.querySelector('#employee_id_input').value = {{$res->id_employee}};
-                        document.querySelector('#time_input').value = '{{$time["time"]}}';
-                        " class="time" id="button_time">{{$time["time"]}}</button>
-                @endforeach
-            </div>
-        @endif
-    @endforeach
-        <input id="employee_id_input" type="hidden" name="id_employee">
-        <input id="time_input" type="hidden" name="time">
-        <input id="service_id_input" type="hidden" name="id_service" value="{{$id_service->id_service}}">
-        <input id="service_duration_input" type="hidden" name="duration" value="{{$id_service->duration}}">
-        <input id="date_input" type="hidden" name="date" value="{{$date}}">
-    </form>
+<div class="record">
+    <p class="form__after" id="record__p">Вы успешно записались!</p>
+    <button class="time" id="record__btn"><a class="record__href" href="/">Вернуться на главную</a></button>
 </div>
+
 
 <footer>
     <div class="footer__contact">

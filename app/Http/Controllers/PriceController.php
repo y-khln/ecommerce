@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Price;
 use Illuminate\Http\Request;
-
+use App\Models\Appointment;
+use App\Models\Schedule;
 class PriceController extends Controller
 {
     /**
@@ -32,5 +33,13 @@ class PriceController extends Controller
             return redirect(route('user.admin'));
         }
     }
+    public function delete($id){
+        try{
+            Appointment::where('id_service',$id)->delete();
+        }
+        finally{}
+        Price::Find($id)->delete();
 
+        return redirect()->route('user.admin')->with('success','successful delete service');
+    }
 }

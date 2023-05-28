@@ -19,7 +19,7 @@ return new class extends Migration
             $table->biginteger('id_service')->unsigned();
             $table->string('client_name');
             $table->string('client_phone');
-            $table->integer('time');
+            $table->string('time');
             $table->date('date');
             $table->timestamps();
 
